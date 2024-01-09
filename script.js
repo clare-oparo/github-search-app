@@ -22,11 +22,19 @@ function displayUsers(users) {
 
     users.forEach(user => {
         const userElement = document.createElement('div');
-        userElement.innerHTML = `<p>${user.login}</p>`;
+        userElement.className = 'user';
+
+        userElement.innerHTML = `
+            <img src="${user.avatar_url}" alt="${user.login}" class="avatar">
+            <p class="username">${user.login}</p>
+            <a href="${user.html_url}" target="_blank" class="profile-link">View Profile</a>
+        `;
+
         userElement.addEventListener('click', () => displayRepositories(user.login));
         results.appendChild(userElement);
     });
 }
+
 
 //when a user is clicked, fetch and display their repositories
 
