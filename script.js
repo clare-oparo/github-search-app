@@ -1,8 +1,11 @@
+//capture html form submission
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const username = document.getElementById('searchInput').value;
     searchGitHubUser(username);
 });
+
+//prevent default action, get input value, and call GitHub API.
 
 function searchGitHubUser(username) {
     fetch(`https://api.github.com/search/users?q=${username}`, {
@@ -15,6 +18,7 @@ function searchGitHubUser(username) {
     .catch(error => console.error('Error:', error));
 }
 
+//show all user results on the page.
 function displayUsers(users) {
     const results = document.getElementById('results');
     results.innerHTML = '';
@@ -31,6 +35,8 @@ function displayUsers(users) {
         results.appendChild(userElement);
     });
 }
+
+//when a user is clicked, fetch and display their repositories.
 
 function displayRepositories(username) {
     fetch(`https://api.github.com/users/${username}/repos`, {
