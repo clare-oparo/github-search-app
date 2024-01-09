@@ -1,8 +1,7 @@
-# github-search-app
-# GitHub User Search Application
+# GitHub User Search App
 
 ## Overview
-The GitHub User Search Application is a simple web application that allows users to search for GitHub profiles and view their repositories. It's built using HTML, CSS, and JavaScript, making requests to the GitHub API to fetch user data.
+The GitHub User Search App is a simple web application that allows users to search for GitHub profiles and view their repositories. It's built using HTML, CSS, and JavaScript, making requests to the GitHub API to fetch user data.
 
 ## Features
 - Search GitHub users by username.
