@@ -36,22 +36,6 @@ body {
     padding-top: 20px;
 }
 
-#results div {
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-#results div:hover {
-    background-color: #f9f9f9;
-}
-
-h2 {
-    color: #007bff;
-}
-
 .user {
     display: flex;
     align-items: center;
@@ -78,4 +62,22 @@ h2 {
 .profile-link {
     color: #007bff;
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
 }
